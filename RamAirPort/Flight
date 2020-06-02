@@ -1,0 +1,11 @@
+Type,Date,Time go,Flight Code,City,Company,Status,Open Gates,Gate
+Arrival,02/01/2022,03:35,LY0,amsterdam,el-al,Final
+Arrival,03/01/2021,03:35,LY1,berlin,el-al,Delay
+Arrival,02/04/2021,03:35,LY2,singapor,el-al,NotFinal
+Arrival,02/01/2021,03:35,LY3,london,el-al,Final
+Arrival,02/01/2021,03:35,LY4,amsterdam,el-al,Final
+Departure,02/01/2021,03:35,LY5,amsterdam,el-al,Final,02:50,A
+Departure,03/01/2022,03:35,LY6,amsterdam,el-al,Final,02:50,B
+Departure,04/01/2022,03:35,LY7,amsterdam,el-al,Final,02:50,C
+Departure,05/01/2022,03:35,LY8,amsterdam,el-al,Final,02:50,D
+Departure,06/01/2022,03:35,LY9,amsterdam,el-al,Final,02:50,E
