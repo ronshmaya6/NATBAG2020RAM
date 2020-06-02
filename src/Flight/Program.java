@@ -1,5 +1,8 @@
 package Flight;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -9,7 +12,7 @@ import Flight.Flight.eStatus;
 
 public class Program {
 
-	public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args) throws CloneNotSupportedException, FileNotFoundException {
 		Scanner src=new Scanner(System.in);
 		ControlClass control=new ControlClass();
 		int choice;
@@ -67,15 +70,20 @@ public class Program {
 				String city4=src.nextLine();
 				System.out.println(control.searchDepByToDateAndCity(getDateFromUser(control, src), getDateFromUser(control, src), city4));
 				break;
+			case ControlClass.TO_WRITE_TO_FILE:
+				writeToFile(control);
+			break;
+			case ControlClass.TO_READ_FROM_FILE:
+				readFromFile(src,control);
+				break;
 			case ControlClass.TO_EXIT_MENU:
-
 				break;
 			default:
 				System.out.println("input uncorrect");
 				break;
 			}
 		} while (choice!=ControlClass.TO_EXIT_MENU);
-
+		src.close();
 	}
 	public static void menu() {
 		System.out.println("menu--->");
@@ -91,6 +99,8 @@ public class Program {
 		System.out.println("to search departure by date to date--->"+ControlClass.TO_SEARCH_DEPARTURE_DATE_TO_DATE);
 		System.out.println("to search arrival date to date and city--->"+ControlClass.TO_SEARCH_ARRIVAL_DATE_TO_DATE_AND_CITY);
 		System.out.println("to search departure date to date and city--->"+ControlClass.TO_SEARCH_DEPARTURE_DATE_TO_DATE_AND_CITY);
+		System.out.println("to write to file--->"+ControlClass.TO_WRITE_TO_FILE);
+		System.out.println("to read from file--->"+ControlClass.TO_READ_FROM_FILE);
 		System.out.println("to Exit menu--->"+ControlClass.TO_EXIT_MENU);
 	}
 	public static void addFlight(ControlClass control,Scanner src,String className) throws CloneNotSupportedException {
@@ -166,5 +176,14 @@ public class Program {
 		src.nextLine();
 		return LocalDateTime.of(year, mounth, day, 0,0);
 	}
-	
+	public static void writeToFile(ControlClass control) throws FileNotFoundException {
+		PrintWriter pw=new PrintWriter(new File("Flight"));
+		pw.println("Type,Date,Time go,Flight Code,City,Company,Status,Open Gates,Gate");
+		control.save(pw);
+		pw.close();
+	}
+	public static void readFromFile(Scanner src, ControlClass control) throws FileNotFoundException {
+		src=new Scanner(new File("Flight"));
+		control=new ControlClass(src);
+	}
 }
