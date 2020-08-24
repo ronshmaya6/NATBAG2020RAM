@@ -1,0 +1,21 @@
+Type	Date	Time go	Flight Code	City	Company	Status	Open Gates	Gate
+Arrival	02/01/2022	03:35	LY0	amsterdam	el-al	Final		
+Arrival	03/01/2021	03:35	LY1	berlin	el-al	Delay		
+Arrival	02/01/2022	03:35	LY2	paris	el-al	NotFinal		
+Arrival	02/01/2021	03:35	LY3	london	el-al	Final		
+Arrival	09/01/2021	03:35	LY4	amsterdam	el-al	Final		
+Arrival	16/01/2022	01:35	LY5	amsterdam	el-al	Final		
+Arrival	23/01/2022	05:35	LY6	amsterdam	el-al	Final		
+Arrival	09/01/2022	11:35	LY7	paris	el-al	Final		
+Arrival	16/01/2022	02:35	LY8	paris	el-al	Final		
+Arrival	02/01/2022	03:35	LY9	amsterdam	el-al	Final		
+Departure	02/01/2022	03:35	LY10	amsterdam	el-al	Final	02:50	A
+Departure	09/01/2022	01:35	LY11	amsterdam	el-al	Final	12:50	B
+Departure	16/01/2022	11:35	LY12	amsterdam	el-al	Final	10:50	C
+Departure	23/01/2022	01:35	LY13	amsterdam	el-al	Final	12:50	D
+Departure	30/01/2022	05:35	LY14	amsterdam	el-al	Final	04:50	E
+Departure	02/01/2022	03:35	LY15	paris	el-al	Final	02:50	D
+Departure	09/01/2022	01:45	LY16	paris	el-al	Final	01:00	A
+Departure	16/01/2022	03:35	LY17	paris	el-al	Final	02:50	B
+Departure	23/01/2022	07:35	LY18	paris	el-al	Final	06:50	C
+Departure	30/01/2022	09:30	LY19	paris	el-al	Final	08:45	A
